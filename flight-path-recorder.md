@@ -5,7 +5,7 @@ Converting the final output video documentation will be added soon.
 ####   Outerra default basic controls used:
 
 For mac, use CMD in place of CTRL
-
+ 
 <table>
 <tr>
 <td>p</td>
