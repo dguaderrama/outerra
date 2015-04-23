@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Outerra by dguaderrama</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a name="top"></a>
+        <h1>Outerra</h1>
+        <p>Documentation for Outerra</p>
+
+        <p class="view"><a href="https://github.com/dguaderrama/outerra">View the Project on GitHub <small>dguaderrama/outerra</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/dguaderrama/outerra/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dguaderrama/outerra/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dguaderrama/outerra">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Daniel Guaderrama's GitHub Pages.</h3>
+
+<h3>Creating a flight path video with smooth transitions</h3>
+
+<p>Converting the final output video documentation will be added soon.</p>
+
+<h4>Outerra default basic controls used:</h4>
+
+<p>For mac, use CMD in place of CTRL</p>
+
+<table>
+<tr>
+<td>p</td>
+<td>:</td>
+<td>open/close console</td>
+</tr>
+<tr>
+<td>CTRL + p</td>
+<td>:</td>
+<td>open/close flight path recorder</td>
+</tr>
+<td>F9</td>
+<td>:</td>
+<td>start/stop screen recording</td>
+</tr>
+<tr>
+<td>mouse left-click</td>
+<td>:</td>
+<td>shoot gun</td>
+</tr>
+</table>
+
+<h4>Smooth flight path</h4>
+
+<p>Before recording (logging) the flight path, you'll want to fly to a location near your first desired point- you'll see what happens when the path is recording (you can't load and fly a path with 0 km/h speed, we'll delete these bad points at the end).</p>
+
+<p>Read through the steps before recording your first path.</p>
+
+<ol>
+<li>Open Outerra</li>
+<li>Record (log) path. You'll have to rename the flight path file for each unique flight path, or you'll overwrite your flight path (see step 6.1 to locate and rename flight path file)
+<ol><li>Fly to a location near your desired path (read above paragraph)</li>
+<li>Open flight path recorder: CTRL + P (mac = CMD + P)<br>
+<img src="images/flight-path-recorder/flight-path-recorder-1.jpg" alt="Outerra: flight path recorder - open flight path recorder" title="" /></li>
+<li>Click RECORD <img src="images/flight-path-recorder/flight-path-recorder-record.jpg" alt="Outerra: flight path recorder - record" title="" /> to start recording flight:</li>
+<li>You'll start seeing the points being logged in the Flight Path Recorder window
+<img src="images/flight-path-recorder/flight-path-recorder-2.jpg" alt="Outerra: flight path recorder - logging points" title="" /></li>
+<li>Start flying!</li>
+<li>Hold down mouse left-click and fly with the standard W,A,S,D controls
+<ul><li>It's recommended to have a longer flight into your path (outerra notes will appear on the bottom-left of the screen in white text, we'll cut this out), rather than starting in the middle of the area you want to record</li>
+<li>You'll notice the points being logged with speed</li>
+<li>You may have to test this step out a few times</li>
+<li>Adjust your speed, try going slower (we can speed up the path in the flight path file)</li>
+<li>Sometimes the flight will continue flying even after releasing the buttons. To fix this: release all buttons, hold down left-click and type/push W. This will (does at the moment) disable the "autopilot" quirk.</li></ul></li>
+<li>Click RECORD to stop recording flight:
+<ul><li>Scroll through your points and delete any with speed: 0 km/h</li>
+<li>You'll fly into the middle of the earth (black screen) if you have any points with 0 km/h
+<img src="images/flight-path-recorder/flight-path-recorder-3.jpg" alt="Outerra: flight path recorder - path points list" title="" /></li></ul></li>
+<li>Click SAVE <img src="images/flight-path-recorder/flight-path-recorder-save.jpg" alt="Outerra: flight path recorder - save" title="" /> to save points to file (or you won't have points to fly to!)</li>
+<li>Click X (top-right) <img src="images/flight-path-recorder/flight-path-recorder-close.jpg" alt="Outerra: flight path recorder - close" title="" /> to close flight path recorder</li></ol></li>
+<li>Auto-fly your path: ALT + p
+<ul><li>Test out your path</li>
+<li>Start the flight path recorder over if you're not satisfied (step 2.1)</li></ul></li>
+<li>Record (screen) path:
+<ol><li>Load and fly logged (recorded) path: ALT + p</li>
+<li>Record (screen): F9</li>
+<li>Be quick!</li>
+<li>You'll see the red 'recording' blinking light at the top-left of the Outerra window<br>
+<img src="images/flight-path-recorder/flight-path-recorder-4.jpg" alt="Outerra: flight path recorder - fly path" title="" /></li>
+<li>Stop recording (screen): F9</li>
+<li>The screen recorder will continue recording until you stop recording. This will result in a longer video and it'll have to be cut down</li></ol></li>
+<li>Export video:
+<ol><li>Close Outerra</li>
+<li>You'll be prompted (v0.8.4.5377) with Outerra Video Converter- don't close this window!<br>
+<img src="images/flight-path-recorder/flight-path-recorder-5.jpg" alt="Outerra: flight path recorder - convert videos" title="" /></li>
+<li>From Outerra Video Converter: </li>
+<li>Click START to convert all screen recordings
+<ul><li>Screen recordings are stored in .y4m format (raw format), the converter converts them into .webm, an open video format (you can play this .webm in a web browser)</li></ul></li>
+<li>The 'videos' folder should open, or click OPEN FOLDER to video files </li>
+<li>Open converted file
+<ul><li>Named something like, capture&#95;1429811867. The numbers attached to the name 'capture&#95;' are a Unix timestamp</li></ul></li>
+<li>Rename file if necessary</li></ol></li>
+<li>Locate flight path file:
+<ol><li>C:\Users\daniel\Outerra\demo.path -- my username is 'daniel'</li>
+<li>This path is by Outerra default installation</li>
+<li>Rename file if necessary, e.g. aspen-resort-demo.path</li>
+<li>You can remove this file from the folder (Outerra will create a new demo.path)</li>
+<li>Rename any flight path file to demo.path (must be located in this folder) and Outerra will load it (click LOAD in flight path recorder)</li></ol></li>
+</ol>
+
+<h4>Things to Consider:</h4>
+
+<ul>
+<li>When clicking SAVE in flight path recorder, the demo.path file will be overwritten with the points that are currently display in the flight path recorder. Be sure to SAVE, then locate and rename your flight path you'd like to save for later, before creating a new flight path.</li>
+<li>Rename any flight path file to demo.path (must be located in C:\Users\yourusername\Outerra\ ) and Outerra will load it (click LOAD in flight path recorder). </li>
+<li>Give yourself a buffer zone when recording a path- you'll want to cut the first 4-ish second out of the video to rid of the Outerra notes on the bottom-left of the screen.</li>
+<li>Be sure all items/windows within Outerra are closed during screen recording (F9) so they're not recorded in the video, e.g. sometimes the console is open (transparent window with warnings, errors, or other messages).</li>
+</ul>
+<hr>
+<br>
+<a href="#top">Back to Top</a>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dguaderrama">dguaderrama</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
+
+
+
