@@ -2,10 +2,27 @@
 
 for mac, use CMD in place of CTRL
 
-p                 :   open/close console
-CTRL + p          :   open/close flight path recorder
-F9                :   start/stop screen recording
-mouse left-click  :    shoot gun 
+<table>
+<tr>
+<td>p</td>
+<td>:</td>
+<td>open/close console</td>
+</tr>
+<tr>
+<td>CTRL + p</td>
+<td>:</td>
+<td>open/close flight path recorder</td>
+</tr>
+<td>F9</td>
+<td>:</td>
+<td>start/stop screen recording</td>
+</tr>
+<tr>
+<td>mouse left-click</td>
+<td>:</td>
+<td>shoot gun</td>
+</tr>
+</table>
 
 ####   smooth flight path
 
