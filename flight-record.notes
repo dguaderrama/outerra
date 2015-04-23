@@ -1,0 +1,151 @@
+#
+#
+#   Flight recorder notes
+#
+#
+#
+
+To save this recorded flight path, exit Outerra and save to the folder (indicated in config file) - Outerra/videos/capture_$TIMESTAMP.webm
+
+.webm is an open media file format designed for web. Most current web browsers play .webm withouth additional plugins/support.
+
+F9 records screen.
+
+CTRL + P = program flight path
+
+F9 and programmed flight path
+
+export as .webm
+
+use HandBrake for video conversion
+  size: default
+  video: 
+    codec: MPEG-4
+    framerate: same as source
+    quality:
+      avg bitrate: 4000 (higher the better video output)
+        2-pass encoding: (checked)
+
+#   Outerra default basic controls
+#   for mac, use CMD in place of CTRL
+
+p                 :   open/close console
+CTRL + p          :   open/close flight path recorder
+F9                :   start/stop screen recording
+mouse left-click  :    shoot gun 
+
+#   smooth flight path
+1. Open Outerra
+#   before recording (logging) the flight path, you'll want to fly to a location near your first desired point- you'll see what happens when the path is recording (you can't load and fly a path with 0 km/h speed, we'll delete these bad points at the end).
+#   read through the steps before recording your first path
+2. Record (log) path:
+  - you'll have to rename the flight path file for each unique flight path, or you\'ll overwrite your flight path (see step 6.1 to locate and rename flight path file)
+  1. Fly to a location near your desired path (read above paragraph)
+  2. Open flight path recorder: CTRL + P (mac = CMD + P)
+  3. Click RECORD to start recording flight:
+    - you'll start seeing the points being logged in the Flight Path Recorder window
+  4. Start flying!
+    - hold down mouse left-click and fly with the standard W,A,S,D controls
+    - it's recommended to have a longer flight into your path (outerra notes will appear on the bottom-left of the screen in white text, we\'ll cut this out), rather than starting in the middle of the area you want to record
+    - you'll notice the points being logged with speed
+    - you may have to test this step out a few times:
+      - adjust your speed, try going slower (we can speed up the path in the flight path file)
+      - sometime the flight will continue flying-- still testing to see how to stop or what's causing this
+  5. Click RECORD to stop recording flight:
+    - scroll through your points and delete any with speed: 0 km/h
+    - you'll fly into the middle of the earth (black screen) if you have any points with 0 km/h
+  6. Click SAVE to save points to file (or you won't have points to fly to!)
+  7. Click X (top-right) to close flight path recorder
+3. auto-fly your path: ALT + p
+  - test out your path
+  - start the flight path recorder over if you're not satisfied (step 2.1)
+4. record (screen) path:
+  1. load and fly logged (recorded) path: CTRL + p
+  2. record (screen): F9
+    - be quick!
+    - you\'ll see the red \'recording\' blinking light at the top-left of the Outerra window
+  3. stop recording (screen): F9
+    - the screen recorder will continue recording until you stop recording. this will result in a longer video and it'll have to be cut down
+5. export video:
+  1. close Outerra
+    - you'll be prompted (v0.8.4.5377) with Outerra Video Converter- dont\' close this window!
+  2. from Outerra Video Converter: 
+    1. click START to convert all screen recordings
+      - screen recordings are stored in .y4m format (raw format), the converter converts them into .webm, an open video format (you can play this .webm in a web browser)
+    2. the \'videos\' folder should open, or click OPEN FOLDER to vide files 
+    3. open converted file
+      - named something like, capture_1429811867. the numbers attached to the name \'capture_\' are a Unix timestamp
+    4. rename file if necessary
+6. locate flight path file:
+  1. C:\Users\daniel\Outerra\demo.path
+    - this path is by Outerra default installation
+    - rename file if necessary, e.g. aspen-resort-demo.path
+    - you can remove this file from the folder (Outerra will create a new demo.path)
+    - rename any flight path file to demo.path (must be located in this folder) and Outerra will load it (click LOAD in flight path recorder)
+
+things to consider:
+
+- when clicking SAVE in flight path recorder, the demo.path file will be overwritten with the points that are currently display in the flight path recorder. be sure to SAVE, locate and rename your flight path you'd like to save for later
+-  rename any flight path file to demo.path (must be located in C:\Users\yourusername\Outerra\) and Outerra will load it (click LOAD in flight path recorder). 
+- give yourself a buffer zone when recording a path- you'll want to cut the first 4-ish second out of the video to rid of the Outerra notes on the bottom-left of the screen
+- be sure all items/windows within Outerra are closed during screen recording (F9) so they're not recorded in the video, e.g. sometimes the console is open (transparent window with warnings, errors, or other messages)
+
+
+#   steps below are choppy- paths don't have smooth transitions
+#   Steps to program flight path, record screen, and then convert to standard video format
+
+1. Open Outerra
+2. Go to first point in path
+3. Open flight path recorder: CTRL + P
+4. Click INSERT to add first point. Click SAVE to begin saving to C:/Users/$USERNAME/Outerra/demo.path
+    NOTE: It may be best to have a point that flies into the first desired way point.
+          It's easier to cut out some of the video rather than having too little video
+    NOTE: This overwrites current demo.path -- be sure to rename demo.path to save this path (aspen-demo.path)
+          To load previously recorded path, rename saved path (aspen-demo.path) to demo.path
+5. For each subsequent point:
+    1. CTRL + P (open flight path recorder)
+    2. Click LOAD to load current flight path
+        You should see all points displayed as list with 0km/h speed
+        Changing the speed within this flight path recorder will result with -2147483648km/h -- can't change speed within Outerra
+    3. Click INSERT to add point
+        This add the current point as the next stop in the flight
+    4. Click SAVE to save to demo.path
+    5. Fly to next point
+6. Add speed to points:
+    1. Locate C:/Users/$USERNAME/Outerra/demo.path and open to edit
+    2. Each waypoint is named "ecef", we need to change "vecolity":
+       1. Change "x" and "y" to "10.0" -- this results with 50km/h
+       2. Change "speed_multiplier" to 100 -- this can be changed within the program
+7. Open flight path recorder in Outerra (CTRL + P)
+    1. Click LOAD
+        This loads C:/Users/$USERNAME/Outerra/demo.path
+    2. Click PLAY
+    3. Adjust speed with Speed Multiplier
+    4. Click on first way point and PLAY to start back from the beginning
+    5. Close flight path recorder
+8. Screen record with ALT + P
+    ---how to stop recording???
+    Exiting Outerra will prompt to save the flight path C:/Users/$USERNAME/Outerra/videos/capture_$UNIXTIMESTAMP.y4M
+      Convert = convert to webm, compatible with all current web browsers
+    You'll have to close and reopen Outerra for each flight recording
+9. Download HandBrake (or similar video coverter)
+   These are the settings that produced a video that looks good:
+  
+     - Picture Tab:
+     ---- size: default
+     - Filters Tab:
+     ---- do nothing
+     - Video Tab:
+     ---- codec: MPEG-4
+     ---- framerate: same as source
+     ---- quality:
+     -------- avg bitrate: 4000 (higher the better video output)
+     -------- 2-pass encoding: (checked)
+     Audio Tab:
+     ---- do nothing
+     Subtitles:
+     ---- do nothing
+     Chapters:
+     ---- do nothing
+   
+
