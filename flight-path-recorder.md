@@ -45,7 +45,8 @@ Read through the steps before recording your first path.
   4. Start flying!
     1. Hold down mouse left-click and fly with the standard W,A,S,D controls
       - It's recommended to have a longer flight into your path (outerra notes will appear on the bottom-left of the screen in white text, we'll cut this out), rather than starting in the middle of the area you want to record
-      - You'll notice the points being logged with speed<br><br> - You may have to test this step out a few times
+      - You'll notice the points being logged with speed
+      - You may have to test this step out a few times
       - Adjust your speed, try going slower (we can speed up the path in the flight path file)
       - Sometimes the flight will continue flying even after releasing the buttons. To fix this: release all buttons, hold down left-click and type/push W. This will (does at the moment) disable the "autopilot" quirk.
   5. Click RECORD to stop recording flight:
